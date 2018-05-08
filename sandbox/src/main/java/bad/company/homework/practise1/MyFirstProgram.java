@@ -1,4 +1,4 @@
-package bad.company;
+package bad.company.homework.practise1;
 
 public class MyFirstProgram {
 
