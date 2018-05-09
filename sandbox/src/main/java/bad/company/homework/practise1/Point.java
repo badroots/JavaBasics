@@ -2,13 +2,13 @@ package bad.company.homework.practise1;
 
 class Point {
 
-  private double x1;
+  public double x1;
 
-  private double y1;
+  public double y1;
 
-  private double x2;
+  public double x2;
 
-  private double y2;
+  public double y2;
 
   Point (double x1, double y1, double x2, double y2) {
     this.x1 = x1;
