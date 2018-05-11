@@ -7,29 +7,32 @@ public class PointTests {
 
   @Test
   public void distanceResultTest() {
-    Point p = new Point(2,4,6,8);
-    Assert.assertEquals(p.distance(), 5.656854249492381);
+    Point p1 = new Point(2, 4);
+    Point p2 = new Point(6, 8);
+    Assert.assertEquals(p1.distance(p2), 5.656854249492381);
   }
 
   @Test
-  public void distanceFirstPointSqr() {
-    Point p = new Point(2,4,6,8);
-    double firstPointSqr = (p.x2-p.x1)*(p.x2-p.x1);
-    Assert.assertEquals(firstPointSqr, 16.0);
+  public void dxCountResultTest() {
+      Point p1 = new Point(2, 4);
+      Point p2 = new Point(6, 8);
+      double dx = p2.x - p1.x;
+      Assert.assertEquals(dx ,4.0 );
   }
 
-  @Test
-  public void distanceSecondPointSqr() {
-    Point p = new Point(2,4,6,8);
-    double firstPointSqr = (p.y2-p.y1)*(p.y2-p.y1);
-    Assert.assertEquals(firstPointSqr, 16.0);
-  }
+    @Test
+    public void dyCountResultTest() {
+        Point p1 = new Point(2, 4);
+        Point p2 = new Point(6, 8);
+        double dy = p2.y - p1.y;
+        Assert.assertEquals(dy ,4.0);
+    }
 
   @Test
   public void distanceNotNull() {
-    Point p = new Point(2,4,6,8);
-    Assert.assertNotNull(p.distance(), "Looks like smth go wrong");
-
+      Point p1 = new Point(2, 4);
+      Point p2 = new Point(6, 8);
+    Assert.assertNotNull(p1.distance(p2), "Looks like smth go wrong");
   }
 
 }
