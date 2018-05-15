@@ -1,6 +1,7 @@
-package bad.company.homework;
+package bad.company.homework.model;
 
 public class ContactData {
+
   private final String firstname;
   private final String middlename;
   private final String lastname;
@@ -15,6 +16,7 @@ public class ContactData {
   private final String notes;
 
   public ContactData(String firstname, String middlename, String lastname, String nickname, String title, String company, String address, String homePhoneNumber, String mobilePhoneNumber, String email, String address2, String notes) {
+
     this.firstname = firstname;
     this.middlename = middlename;
     this.lastname = lastname;

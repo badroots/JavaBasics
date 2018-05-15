@@ -1,4 +1,4 @@
-package bad.company.homework;
+package bad.company.homework.model;
 
 public class GroupData {
   private final String name;
