@@ -16,7 +16,6 @@ public class ApplicationManager {
   FirefoxDriver wd;
 
   public void init() {
-    FirefoxDriver wd;
     wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true).setLogLevel(FirefoxDriverLogLevel.TRACE));
     wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     wd.get("http://localhost/addressbook/index.php");

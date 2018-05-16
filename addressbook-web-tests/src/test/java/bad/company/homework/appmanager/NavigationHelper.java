@@ -4,46 +4,56 @@ import bad.company.homework.model.ContactData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class NavigationHelper {
-
-  private FirefoxDriver wd;
+public class NavigationHelper extends HelperBase {
 
   public NavigationHelper(FirefoxDriver wd) {
-    this.wd = wd;
+    super(wd);
   }
 
   public void fillContactData(ContactData contactData) {
-    wd.findElement(By.name("firstname")).click();
-    wd.findElement(By.name("firstname")).sendKeys(contactData.getFirstname());
-    wd.findElement(By.name("middlename")).click();
-    wd.findElement(By.name("middlename")).sendKeys(contactData.getMiddlename());
-    wd.findElement(By.name("lastname")).click();
-    wd.findElement(By.name("lastname")).sendKeys(contactData.getLastname());
-    wd.findElement(By.name("nickname")).click();
-    wd.findElement(By.name("nickname")).sendKeys(contactData.getNickname());
-    wd.findElement(By.name("title")).click();
-    wd.findElement(By.name("title")).sendKeys(contactData.getTitle());
-    wd.findElement(By.name("company")).click();
-    wd.findElement(By.name("company")).sendKeys(contactData.getCompany());
-    wd.findElement(By.name("address")).click();
-    wd.findElement(By.name("address")).sendKeys(contactData.getAddress());
-    wd.findElement(By.name("home")).click();
-    wd.findElement(By.name("home")).sendKeys(contactData.getHomePhoneNumber());
-    wd.findElement(By.name("mobile")).click();
-    wd.findElement(By.name("mobile")).sendKeys(contactData.getMobilePhoneNumber());
-    wd.findElement(By.name("email")).click();
-    wd.findElement(By.name("email")).sendKeys(contactData.getEmail());
-    wd.findElement(By.name("address2")).click();
-    wd.findElement(By.name("address2")).sendKeys(contactData.getAddress2());
-    wd.findElement(By.name("notes")).click();
-    wd.findElement(By.name("notes")).sendKeys(contactData.getNotes());
+    click(By.name("firstname"));
+    type(By.name("firstname"), contactData.getFirstname());
+
+    click(By.name("middlename"));
+    type(By.name("middlename"), contactData.getFirstname());
+
+    click(By.name("lastname"));
+    type(By.name("lastname"), contactData.getLastname());
+
+    click(By.name("nickname"));
+    type(By.name("nickname"), contactData.getLastname());
+
+    click(By.name("title"));
+    type(By.name("title"), contactData.getLastname());
+
+    click(By.name("company"));
+    type(By.name("company"), contactData.getLastname());
+
+    click(By.name("address"));
+    type(By.name("address"), contactData.getLastname());
+
+    click(By.name("home"));
+    type(By.name("home"), contactData.getLastname());
+
+    click(By.name("mobile"));
+    type(By.name("mobile"), contactData.getLastname());
+
+    click(By.name("email"));
+    type(By.name("email"), contactData.getLastname());
+
+    click(By.name("address2"));
+    type(By.name("address2"), contactData.getLastname());
+
+    click(By.name("notes"));
+    type(By.name("notes"), contactData.getLastname());
+
   }
 
   public void goBackToHomePage() {
-    wd.findElement(By.linkText("home page")).click();
+    click(By.name("home page"));
   }
 
   public void goToGroupPage() {
-    wd.findElement(By.linkText("group page")).click();
+    click(By.linkText("group page"));
   }
 }
