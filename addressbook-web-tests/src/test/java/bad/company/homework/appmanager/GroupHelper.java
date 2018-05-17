@@ -11,7 +11,7 @@ public class GroupHelper extends HelperBase {
   }
 
   public void submitGroupForm(String submit) {
-    click(By.name("submit"));
+    click(By.name(submit));
   }
 
   public void fillGroupForm(GroupData groupData) {
@@ -33,9 +33,18 @@ public class GroupHelper extends HelperBase {
     click(By.name("delete"));
   }
 
+  public void editGroupInit() {
+    click(By.name("edit"));
+  }
+
+  public void editGroupUpdate() {
+    click(By.name("update"));
+  }
+
   public void selectGroup() {
     if (!wd.findElement(By.name("selected[]")).isSelected()) {
       click(By.name("selected[]"));
+
     }
   }
 }
